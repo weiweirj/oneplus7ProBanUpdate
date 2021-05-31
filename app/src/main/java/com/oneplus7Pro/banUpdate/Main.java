@@ -12,7 +12,7 @@ public class Main implements IXposedHookLoadPackage{
             XposedHelpers.findAndHookMethod(loadPackageParam.classLoader.loadClass("org.json.JSONObject"), "getString",String.class, new XC_MethodHook() {
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                    if (param.args[0]=="new_version")
+                    if (param.args[0]=="new_version" || param.args[0]=="down_url" )
                         param.setResult("");
                     super.afterHookedMethod(param);
                 }
