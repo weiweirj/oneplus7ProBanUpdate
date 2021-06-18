@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="xposedscope">
+        <item>com.oneplus.opbackup</item>
+        <item>com.android.settings</item>
+    </array>
+</resources>
